@@ -1,6 +1,15 @@
 # Online Learning Platform
 
+🌐 **Live Demo:** https://albushraedu.com
+
 This repository contains a PHP-based learning platform for English and Math exercises, worksheets, and games.
+
+## Features
+
+- Responsive design
+- English and Math learning resources
+- Interactive exercises and worksheets
+- User-friendly interface
 
 ## Project structure
 
@@ -9,11 +18,6 @@ This repository contains a PHP-based learning platform for English and Math exer
 - `files/` - static downloadable files
 - `uploads/` - runtime file uploads (ignored by Git)
 - `db.php` - database connection
-
-## Notes
-
-- `uploads/` is excluded from Git because it contains user-uploaded files.
-- If you want to push this repository to GitHub, make sure the `.gitignore` file is included.
 
 ## Getting started
 

@@ -1,0 +1,27 @@
+# Ignore runtime uploads and generated files
+/uploads/
+
+# Ignore editor and OS metadata
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon?
+$RECYCLE.BIN/
+
+# Ignore temporary and backup files
+*.log
+*.cache
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Ignore dependency directories
+node_modules/
+vendor/

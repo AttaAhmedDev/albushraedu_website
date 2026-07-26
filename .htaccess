@@ -1,19 +1,15 @@
 RewriteEngine On
 RewriteBase /OnlineLearningPlatform/
 
-DirectoryIndex frontend/dist/index.html
+DirectoryIndex index.php index.html
 
-# API → PHP front controller
-RewriteRule ^api/(.*)$ backend/public/index.php?route=$1 [QSA,L]
+# Pass through real files only (NOT directories — the project root is a directory
+# and would otherwise stop rewriting and show Apache's folder listing)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
 
-# Static asset folders at project root
-RewriteRule ^(uploads|images|files)/ - [L]
+# Let these folders handle their own requests
+RewriteRule ^(api|backend|uploads|images|files|frontend)/ - [L]
 
-# Serve built SPA assets when the file exists
-RewriteCond %{REQUEST_URI} !^/OnlineLearningPlatform/api/
-RewriteCond %{DOCUMENT_ROOT}/OnlineLearningPlatform/frontend/dist/$1 -f
+# Everything else → Vite production build
 RewriteRule ^(.*)$ frontend/dist/$1 [L]
-
-# SPA fallback
-RewriteCond %{REQUEST_URI} !^/OnlineLearningPlatform/api/
-RewriteRule ^ frontend/dist/index.html [L]

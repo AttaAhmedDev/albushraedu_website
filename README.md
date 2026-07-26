@@ -24,7 +24,7 @@ PHP JSON API + React SPA for English and Math kindergarten learning content.
 
 - XAMPP (Apache + MySQL + PHP)
 - Node.js 18+ (to build the frontend)
-- Database: `kids_app` (configure credentials in `backend/config/db.php`)
+- Database: `kidds_app` (configure credentials in `backend/config/db.php`)
 
 ## Setup
 

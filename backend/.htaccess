@@ -1,2 +1,0 @@
-# Deny direct web access to backend source (except public/)
-Require all denied

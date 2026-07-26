@@ -25,3 +25,7 @@ $RECYCLE.BIN/
 # Ignore dependency directories
 node_modules/
 vendor/
+
+# Ignore Vite cache
+frontend/.vite/
+

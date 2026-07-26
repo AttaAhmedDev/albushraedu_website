@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /OnlineLearningPlatform/
+
+DirectoryIndex frontend/dist/index.html
+
+# API → PHP front controller
+RewriteRule ^api/(.*)$ backend/public/index.php?route=$1 [QSA,L]
+
+# Static asset folders at project root
+RewriteRule ^(uploads|images|files)/ - [L]
+
+# Serve built SPA assets when the file exists
+RewriteCond %{REQUEST_URI} !^/OnlineLearningPlatform/api/
+RewriteCond %{DOCUMENT_ROOT}/OnlineLearningPlatform/frontend/dist/$1 -f
+RewriteRule ^(.*)$ frontend/dist/$1 [L]
+
+# SPA fallback
+RewriteCond %{REQUEST_URI} !^/OnlineLearningPlatform/api/
+RewriteRule ^ frontend/dist/index.html [L]

@@ -1,0 +1,57 @@
+.flashcards-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.letters-bg { background: linear-gradient(135deg, #4facfe, #43e97b); }
+.numbers-bg { background: linear-gradient(135deg, #fa709a, #fee140); }
+
+.flashcards-box {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 32px;
+  padding: 32px 24px;
+  width: min(1100px, 95%);
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.flashcards-box h1 {
+  font-family: 'Fredoka', 'Baloo 2', cursive;
+  font-size: 2.4rem;
+  color: #ff4d4d;
+  margin-bottom: 8px;
+}
+
+.flashcards-box p {
+  color: #666;
+  margin-bottom: 22px;
+}
+
+.flash-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.flash-item {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(145deg, #4facfe, #00c6ff);
+  transition: transform 0.2s;
+}
+
+.flash-item:nth-child(3n+2) { background: linear-gradient(145deg, #43e97b, #38f9d7); }
+.flash-item:nth-child(3n+3) { background: linear-gradient(145deg, #fa709a, #fee140); }
+.flash-item:hover { transform: translateY(-4px) scale(1.05); }

@@ -4,7 +4,7 @@
 
 ### index
 
-![index](Screenshot_1.png)
+![index](Screenshot.png)
 
 PHP JSON API + React SPA for English and Math kindergarten learning content.
 

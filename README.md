@@ -2,6 +2,13 @@
 
 🌐 **Live Demo:** https://albushraedu.com
 
+### index
+
+![index](Screenshot.png)
+### dashboard
+
+![dashboard](Screenshot_1.png)
+
 PHP JSON API + React SPA for English and Math kindergarten learning content.
 
 ## Features
